@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novel Recommendation</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid navigation">
+        <a class="navbar-brand" href="index.html">
+			<img src="images/79.png" href="index.html">
+		</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="allBook.html">All Books</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="fantasy.html">Fantasy</a>
+                <a class="dropdown-item" href="romance.html">Romance</a>
+				<a class="dropdown-item" href="scifi.html">Science Fiction</a>
+                
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    
+	
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <div class="row">
+            <div class="col-2"><img class="rounded-circle" alt="Fantasy" src="images/25.png"></div>
+            <div class="col-lg-6 col-10 ml-1">
+				<a  href="fantasy.html">
+              <h4>Fantasy</h4>
+				</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-2"><img class="rounded-circle" alt="Romance" src="images/28.png"></div>
+            <div class="col-lg-6 col-10 ml-1">
+              <a  href="romance.html">
+              <h4>Romance</h4>
+				</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row">
+            <div class="col-2"><img class="rounded-circle" alt="ScienceFiction" src="images/27.png"></div>
+            <div class="col-lg-6 col-10 ml-1">
+              <a  href="scifi.html">
+              <h4>Sci-Fiction</h4>
+				</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+	  
+	</div>
+    
+    <hr>
+    <h2 class="text-center">FANTASY BOOKS</h2>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <img class="mr-3" src="images/68.png" alt="Generic placeholder image">
+		  <div class="media-body">
+                <h3 class="mt-0 mb-1">The Hobbit</h3>
+                <span class="heading">User Rating</span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<p>4.25 average rating based on 18666 reviews.</p>
+			  	
+			  	<img class="mr-3" src="images/62.png" alt="Generic placeholder image">
+			  	<span> 79% </span>
+			  	<img class="mr-3" src="images/64.png" alt="Generic placeholder image">
+			  	<span> 21% </span>
+			  	<p> </p>
+			  	<div>
+			  		<img class="mr-3" src="images/hobbit.png" style="width: 100%" alt="Generic placeholder image">
+					<center>
+					<h3 class="mr-3">WORDCLOUD</h3>
+					</center>
+			  	</div>
+			  	
+              </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container text-white bg-dark p-4">
+      <div class="row">
+        
+        <div class="col-md-4 col-lg-5 col-6">
+          <address>
+            <strong>Artificial Intelligent</strong><br>
+            Universiti Teknologi Mara<br>
+            Cawangan Shah Alam<br>
+            <abbr title="Phone">Phone:</abbr> (+06) 1110 614440
+          </address>
+          <address>
+            <strong>MUHAMMAD TASHDIQ BIN BASRI</strong><br>
+            <a href="mailto:#">tashdiq001@gmail.com</a>
+          </address>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Copyright © MyWebsite. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+	<script src="jquery.collapser.min.js"></script>
+	<script>
+		$('.card-text').collapser({
+			mode: 'words',
+			truncate: 20
+		}
+		);
+	  </script>
+  </body>
+	
+</html>
