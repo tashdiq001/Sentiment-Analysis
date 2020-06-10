@@ -1,0 +1,155 @@
+<!--
+Copyright 2018 Google LLC. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================
+-->
+
+<!doctype html>
+<head>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css" />
+</head>
+
+<body>
+  <style>
+    #review-text {
+      font-size: 120%;
+      width: 60%;
+      height: 200px;
+    }
+    h1.title {
+      color: #4040a0;
+    }
+
+    p.overview {
+        width: 600px;
+        text-align: justify;
+        font-size: 13pt;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    div.content {
+      border-radius: 10px;
+      display: inline-block;
+      border: 5px solid #8080c0;
+      margin-left: auto;
+      margin-right: auto;
+      vertical-align: top;
+      min-width: 95%!important;
+    }
+    input[type=text], select {
+      width: 20%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea:focus {
+        box-shadow: inset 0 0 3px 2px #8080c0; /* provides a more style-able
+                                               replacement to the outline */
+    }​
+    legend {}
+    textarea {
+        width: 40%;
+        height: 10em;
+        padding: 10px;
+        border-radius: 1em;
+        border: 1px solid #ccc; /* everything up to and including this line
+                                   are aesthetics, adjust to taste */
+        outline: none; /* removes the default outline */
+        resize: none; /* prevents the user-resizing, adjust to taste */
+    }
+
+    .button { 
+      background-color: #8080c0;
+      border: none;
+      color: white;
+      padding: 6px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .buttonr { 
+      background-color: white; 
+      color: black; 
+      border: 2px solid #00BFFF;
+    }
+
+    .buttonr:hover { 
+      background-color: #00BFFF; 
+      color: white;
+    }
+  </style>
+  <center>
+    <br>
+    <div class="content">
+        <h1 class="title">
+          SENTIMENT | PREDICTION | MODEL
+        </h1>
+
+        <div class="create-model">
+          <button id="load-pretrained-remote" class="button buttonr" style="display:none">Load hosted pretrained model</button>
+          <button id="load-pretrained-local" class="button buttonr" style="display:none">Load local pretrained model</button>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td><span>Model type: </span></td>
+              <td><span id="modelType"></span></td>
+            </tr>
+            <tr>
+              <td><span>Vocabulary size: </span></td>
+              <td><span id="vocabularySize"></span></td>
+            </tr>
+            <tr>
+              <td><span>Max length: </span></td>
+              <td><span id="maxLen"></span></td>
+            </tr>
+          </table>
+        </div>
+        <br><br>
+        <div>
+          <select id="test-example-select" class="form-control">
+            <option value="positive">Positive example</option>
+            <option value="negative">Negative example</option>
+          </select>
+        </div>
+        <div>
+          <textarea id="review-text" placeholder="insert review"></textarea>
+        </div>
+        <hr>
+        <div>
+          <span id="status">Standing by.</span>
+        </div>
+        <br>
+    </div>
+  </center>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.8.0"> </script> 
+
+
+  <script src='ui.js'></script>
+  <script src='loader.js'></script>
+  <script src='index.js'></script>
+</body>
